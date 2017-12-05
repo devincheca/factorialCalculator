@@ -1,18 +1,28 @@
 // Devin Checa
+// can only handle up to 12!
 #include <iostream>
 using namespace std;
-int factorial(int n);
+long factorial(short n);
 int main()
 {
-	int input = 0;
+	short input = 0;
 	cout << "Input factorial to calculate: " << endl;
 	cin >> input;
+	cout
+		<< endl
+		<< input
+		<< "! evaluates to: "
+		<< endl
+		<< factorial(input)
+		<< endl;
+	system("pause");
+	return 0;
 }
-int factorial(int n)
+long factorial(short n)
 {
-	int product = 0;
+	long product = 0;
 	n > 1 ?
-		product = (n * factorial(n - 1)):
+		product = n * factorial(n - 1):
 		product = 1;
 	return product;
 }
